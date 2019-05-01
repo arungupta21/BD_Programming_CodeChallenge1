@@ -20,10 +20,10 @@ Return Value:
 >= 0: If some LCS is found 
 
 */
-int GetLCS(string str1, string str2, string& strLCS)
+int CommonSubsequence(string str1, string str2, string& strLCS)
 {
     strLCS = "";
-    int nLastMatchIndex = -1;    
+    int nLastMatchIndex = -1;   //Integer to keep the index of the last match in str2
 
     for(int i = 0; i < str1.length(); i++)
     {
@@ -51,8 +51,8 @@ int main()
     cout<<"Enter String 1: ";  cin>>str1;
     cout<<"Enter String 2: ";  cin>>str2;   
 
-    int nResult1 = GetLCS(str1, str2, strLCS1);     //Get the LCS taking first string as the pilot
-    int nResult2 = GetLCS(str2, str1, strLCS2);     //Get the LCS taking second string as the pilot
+    int nResult1 = CommonSubsequence(str1, str2, strLCS1);     //Get the LCS taking first string as the pilot
+    int nResult2 = CommonSubsequence(str2, str1, strLCS2);     //Get the LCS taking second string as the pilot
     
 
     if(nResult1 <= 0 && nResult2 <= 0)
