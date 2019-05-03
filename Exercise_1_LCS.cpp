@@ -1,10 +1,8 @@
 
 #include<iostream>
-#include<cstring>
 #include<string>
 
 using namespace std;
-
 
 /*
 Function to get the Longest Common Sequence(LCS)
@@ -66,9 +64,6 @@ int main()
         else
             cout<<"\nThe LCS = "<<strLCS2<<"\n\n";        
     }   
-
-    int nhold;  
-    cin>>nhold; //Just to hold the screen on console
 
     return 0;
 }
